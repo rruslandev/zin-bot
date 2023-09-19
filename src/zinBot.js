@@ -5,9 +5,11 @@ const { BOT_TOKEN } = require('./config/tokens')
 const handleStartCommand = require('./handlers/start/handleStartCommand')
 const handleMoreInfoRequest = require('./handlers/moreInfo/handleMoreInfoRequest')
 const handleQuestionAnswers = require('./handlers/moreInfo/handleQuestionAnswers')
-const handleBackRequest = require('./handlers/moreInfo/handleBackRequest')
+const handleOnMenuRequest = require('./handlers/moreInfo/handleOnMenuRequest')
+const handleMultiStepDialog = require('./handlers/dataFormCollection/handleMultiStepDialog')
 
 const bot = new TelegramBot(BOT_TOKEN, { polling: true })
+
 console.log('Bot is running!')
 
 bot.on('polling_error', (error) => {
@@ -15,6 +17,9 @@ bot.on('polling_error', (error) => {
 })
 
 handleStartCommand(bot)
+
+handleMultiStepDialog(bot)
+
 handleMoreInfoRequest(bot)
 handleQuestionAnswers(bot)
-handleBackRequest(bot)
+handleOnMenuRequest(bot)

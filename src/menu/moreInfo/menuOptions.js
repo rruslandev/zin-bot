@@ -4,7 +4,7 @@ const {
 	aboutProjectBtn,
 	readMoreAboutZineCultureBtn,
 	wantToHelpProjectBtn,
-	backBtn,
+	onMainBtn,
 } = require('./buttons')
 
 const MORE_INFO_MENU = {
@@ -16,7 +16,7 @@ const MORE_INFO_MENU = {
 			[aboutProjectBtn],
 			[readMoreAboutZineCultureBtn],
 			[wantToHelpProjectBtn],
-			[backBtn],
+			[onMainBtn],
 		],
 	},
 }

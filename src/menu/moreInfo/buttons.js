@@ -3,7 +3,7 @@ const howToSellBtn = 'Как продавать?'
 const aboutProjectBtn = 'О проекте'
 const readMoreAboutZineCultureBtn = 'Что ещё почитать о зин-культуре?'
 const wantToHelpProjectBtn = 'Я хочу помочь проекту!'
-const backBtn = 'Назад'
+const onMainBtn = 'На главную'
 
 module.exports = {
 	whoCanOfferZineBtn,
@@ -11,5 +11,5 @@ module.exports = {
 	aboutProjectBtn,
 	readMoreAboutZineCultureBtn,
 	wantToHelpProjectBtn,
-	backBtn,
+	onMainBtn,
 }

@@ -5,6 +5,8 @@ function createNewUser(msg, chatId) {
 		firstName: msg.from.first_name || '',
 		lastName: msg.from.last_name || '',
 		chatId,
+		state: null,
+		data: {},
 		// добавьте другие поля по мере необходимости
 	}
 }

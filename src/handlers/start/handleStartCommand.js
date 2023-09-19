@@ -18,12 +18,14 @@ function handleStartCommand(bot) {
 				username: msg.from.username || user.username,
 				firstName: msg.from.first_name || user.firstName,
 				lastName: msg.from.last_name || user.lastName,
+				state: null,
+				data: {},
 				// Обновите другие поля по мере необходимости
 			}
 			setUser(chatId, updatedUser)
 		}
 
-		bot.sendMessage(chatId, greetingMsg, MAIN_MENU)
+		return bot.sendMessage(chatId, greetingMsg, MAIN_MENU)
 	})
 }
 

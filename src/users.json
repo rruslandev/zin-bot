@@ -1,14 +1,28 @@
 [
-	{
-		"username": "rruslan_dev",
-		"firstName": "RUSLAN",
-		"lastName": "",
-		"chatId": 439592022
-	},
-	{
-		"username": "dmitrii_fakedddddddd",
-		"firstName": "Dmitriddd",
-		"lastName": "Faaaddddd",
-		"chatId": 6239925941
-	}
+  {
+    "username": "dmitrii_fakedddddddd",
+    "firstName": "Dmitriddd",
+    "lastName": "Faaaddddd",
+    "chatId": 6239925941,
+    "state": null,
+    "data": {}
+  },
+  {
+    "username": "rruslan_dev",
+    "firstName": "RUSLAN",
+    "lastName": "",
+    "chatId": 439592022,
+    "state": "ENTER_VIDEO_URL",
+    "data": {
+      "authorName": "ddd",
+      "city": "d",
+      "publisherName": "d",
+      "year": "s",
+      "description": "s",
+      "photos": [
+        "AgACAgIAAxkBAAIKP2UKJoFO86SahdAm2ogM9pudK0_tAAJQyTEbR_pYSA8QZbCha27KAQADAgADeQADMAQ",
+        "AgACAgIAAxkBAAIKQGUKJo0PCFDxCl7NKuPXuxSkAqjrAAJPyTEbR_pYSMloefLT0YdCAQADAgADeQADMAQ"
+      ]
+    }
+  }
 ]

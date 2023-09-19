@@ -5,6 +5,9 @@ const backBtn = 'Назад'
 // SKIP_MENU
 const skipBtn = 'Пропустить'
 
+// ALL_PHOTOS_UPLOADED_MENU
+const allPhotosUploadedBtn = 'Все фото загружены'
+
 // SELL_QUESTION_MENU
 const yesBtn = 'Да'
 const noOnlyShowBtn = 'Нет, просто показываю красивое'
@@ -27,4 +30,5 @@ module.exports = {
 	noRestartBtn,
 	addAnotherPublicationBtn,
 	moreInfoBtn,
+	allPhotosUploadedBtn,
 }
