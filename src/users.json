@@ -1,28 +1,68 @@
 [
-  {
-    "username": "dmitrii_fakedddddddd",
-    "firstName": "Dmitriddd",
-    "lastName": "Faaaddddd",
-    "chatId": 6239925941,
-    "state": null,
-    "data": {}
-  },
-  {
-    "username": "rruslan_dev",
-    "firstName": "RUSLAN",
-    "lastName": "",
-    "chatId": 439592022,
-    "state": "ENTER_VIDEO_URL",
-    "data": {
-      "authorName": "ddd",
-      "city": "d",
-      "publisherName": "d",
-      "year": "s",
-      "description": "s",
-      "photos": [
-        "AgACAgIAAxkBAAIKP2UKJoFO86SahdAm2ogM9pudK0_tAAJQyTEbR_pYSA8QZbCha27KAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAIKQGUKJo0PCFDxCl7NKuPXuxSkAqjrAAJPyTEbR_pYSMloefLT0YdCAQADAgADeQADMAQ"
-      ]
-    }
-  }
+	{
+		"username": "dmitrii_fakedddddddd",
+		"firstName": "Dmitriddd",
+		"lastName": "Faaaddddd",
+		"chatId": 6239925941,
+		"state": null,
+		"data": {}
+	},
+	{
+		"username": "rruslan_dev",
+		"firstName": "RUSLAN",
+		"lastName": "",
+		"chatId": 439592022,
+		"state": "CONFIRMATION",
+		"data": {
+			"authorName": "ruslan",
+			"city": "almaty",
+			"publisherName": "Спасибо! Заявка улетела к моей коллеге-человеку. Когда у неё будет вр",
+			"year": "2023",
+			"description": "Спасибо! Заявка улетела к моей коллеге-человеку. Когда у неё будет время она обязательно посмотрит. \"Дзинь\" это независимый проект и мы всегда рады репостам, упоминаниям и донатам. Что-нибудь ещё?\n\nДобавить ещ...",
+			"photos": [
+				"AgACAgIAAxkBAAIaPGUMyKQfZlMmS3lGc6sYKBj8M8iMAAL2zzEb6OhgSCBaXTI4MeB_AQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIaPWUMyKSQ3_D3CxNI-h_Xal5Im6p9AAL3zzEb6OhgSL3SXa9RNGT5AQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIaPmUMyKSvUe0agS1nM4X5_sC1MjA6AAL4zzEb6OhgSDL8nxqL5JyqAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIaP2UMyKSqduSmwin5KXe-L2Ly8A_XAAL5zzEb6OhgSEuQ8hVZRf7ZAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIaQGUMyKQQjsFn88WRc6bzeYXtBlYsAAPQMRvo6GBIs9FvnMCG5JYBAAMCAAN5AAMwBA"
+			],
+			"videoLink": "",
+			"isForSale": false,
+			"authorTelegram": "",
+			"authorSocialNetwork": ""
+		}
+	},
+	{
+		"username": "ilyamolokov",
+		"firstName": "i am Илья",
+		"lastName": "",
+		"chatId": 263018510,
+		"state": "START_DIALOG",
+		"data": {}
+	},
+	{
+		"username": "krugloval",
+		"firstName": "Валерия",
+		"lastName": "",
+		"chatId": 133565174,
+		"state": "CONFIRMATION",
+		"data": {
+			"authorName": "Имя Фамилия",
+			"city": "Ростов",
+			"publisherName": "тест-зин",
+			"year": "2023",
+			"description": "Пленочная зеркалка, много современных функций в ней присутствует , байонет с этой камеры Сони до сих пор использует на современных своих цифровых камерах, то есть на нее можно ставить современные объективы Сони с байонетом А и будет работать автофокус и остальные функции. Состояние отлично, все работает как надо, слабое место в этих моделях автофокус, но на этой прекрасно работает.",
+			"photos": [
+				"AgACAgIAAxkBAAIZYWUMvzXtbAEelk0EwLbHodwLrY1HAAJD1DEb3udoSLn4kOrLlSPBAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIZYmUMvzVcxJt5VswtcF1ZQq1Bm5n5AAJA1DEb3udoSDs___L4r-mkAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIZY2UMvzVu3vKN-vG9fA-DN1dX7kFNAAJB1DEb3udoSKMcUeSFYUfnAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIZZGUMvzWEXFtm2FXL0le5O6PigromAAJC1DEb3udoSOmgyLk2hyMYAQADAgADeQADMAQ"
+			],
+			"videoLink": "",
+			"isForSale": true,
+			"price": "500",
+			"authorTelegram": "https://t.me/krugloval",
+			"authorSocialNetwork": "t.me/lens_based"
+		}
+	}
 ]

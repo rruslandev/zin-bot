@@ -9,6 +9,7 @@ const {
 	addAnotherPublicationBtn,
 	moreInfoBtn,
 	allPhotosUploadedBtn,
+	uploadPhotosAgainBtn,
 } = require('./buttons')
 
 const OK_BACK_MENU = {
@@ -25,10 +26,17 @@ const SKIP_MENU = {
 	},
 }
 
-const ALL_PHOTOS_UPLOADED_MENU = {
+// const ALL_PHOTOS_UPLOADED_MENU = {
+// 	reply_markup: {
+// 		resize_keyboard: true,
+// 		keyboard: [[allPhotosUploadedBtn]],
+// 	},
+// }
+
+const UPLOAD_PHOTOS_MENU = {
 	reply_markup: {
 		resize_keyboard: true,
-		keyboard: [[allPhotosUploadedBtn]],
+		keyboard: [[allPhotosUploadedBtn], [uploadPhotosAgainBtn]],
 	},
 }
 
@@ -59,5 +67,5 @@ module.exports = {
 	SELL_QUESTION_MENU,
 	CONFIRMATION_MENU,
 	ADD_ANOTHER_PUBLICATION_MENU,
-	ALL_PHOTOS_UPLOADED_MENU,
+	UPLOAD_PHOTOS_MENU,
 }

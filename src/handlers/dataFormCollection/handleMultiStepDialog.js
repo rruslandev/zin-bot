@@ -7,7 +7,7 @@ const {
 	SELL_QUESTION_MENU,
 	CONFIRMATION_MENU,
 	ADD_ANOTHER_PUBLICATION_MENU,
-	ALL_PHOTOS_UPLOADED_MENU,
+	UPLOAD_PHOTOS_MENU,
 } = require('../../menu/dataFormCollection/menuOptions')
 
 const { MAIN_MENU } = require('../../menu/main/menuOptions')
@@ -42,6 +42,7 @@ const {
 	addAnotherPublicationBtn,
 	moreInfoBtn,
 	allPhotosUploadedBtn,
+	uploadPhotosAgainBtn,
 } = require('../../menu/dataFormCollection/buttons')
 
 function handleMultiStepDialog(bot) {
@@ -108,31 +109,49 @@ function handleMultiStepDialog(bot) {
 				case enterDescriptionState:
 					user.data.description = msg.text
 					user.state = uploadPhotosState
+					user.data.photos = []
 					setUser(chatId, user)
 					bot.sendMessage(
 						chatId,
-						'загрузите до 10 фотографий. для вертикальных фото лучше использовать формат 4:5*',
-						ALL_PHOTOS_UPLOADED_MENU
+						'загрузите до 10 фотографий. для вертикальных фото лучше использовать формат 4:5* Если загрузили не ту фотографию, то нажмите на кнопку "загрузить заново" и снова отправьте все нужные фото',
+						UPLOAD_PHOTOS_MENU
 					)
 					break
 				case uploadPhotosState:
 					if (msg.text === allPhotosUploadedBtn) {
-						if (user.data.photos && user.data.photos.length > 0) {
+						if (user.data.photos && user.data.photos.length > 0 && user.data.photos.length <= 10) {
 							user.state = enterVideoUrlState
 							setUser(chatId, user)
 							bot.sendMessage(chatId, 'cсылка на видео-пролистывание (youtube/vimeo)', SKIP_MENU)
-						} else {
+						} else if (user.data.photos.length === 0) {
 							bot.sendMessage(chatId, 'Загрузите хотя бы одно фото прежде чем продолжить.')
+						} else if (user.data.photos.length > 10) {
+							bot.sendMessage(
+								chatId,
+								`Пожалуйста, загрузите не более 10 фото. Сейчас нажмите на кнопку «загрузить заново»`,
+								UPLOAD_PHOTOS_MENU
+							)
 						}
+					} else if (msg.text === uploadPhotosAgainBtn) {
+						user.data.photos = []
+						setUser(chatId, user)
+						bot.sendMessage(
+							chatId,
+							'загрузите до 10 фотографий. для вертикальных фото лучше использовать формат 4:5* Если загрузили не ту фотографию, то нажмите на кнопку "загрузить заново" и снова отправьте все нужные фото',
+							UPLOAD_PHOTOS_MENU
+						)
 					} else if (!msg.photo) {
-						bot.sendMessage(chatId, 'Только фото!')
+						bot.sendMessage(
+							chatId,
+							'Только фото! Если отправите текст и другие типы файлов, то они учитываться не будут. Я заберу только фотографии :)'
+						)
 					} else if (msg.photo) {
 						const photo = msg.photo[msg.photo.length - 1]
 						const fileId = photo.file_id
 
-						if (!user.data.photos) {
-							user.data.photos = []
-						}
+						// if (!user.data.photos) {
+						// 	user.data.photos = []
+						// }
 
 						user.data.photos.push(fileId)
 						setUser(chatId, user)
@@ -186,7 +205,7 @@ function handleMultiStepDialog(bot) {
 					if (msg.text === skipBtn) {
 						user.data.authorTelegram = ''
 					} else {
-						user.data.authorTelegram = `t.me/${msg.text}`
+						user.data.authorTelegram = `https://t.me/${msg.text}`
 					}
 					user.state = enterSocialState
 					setUser(chatId, user)
@@ -201,10 +220,55 @@ function handleMultiStepDialog(bot) {
 					user.state = confirmationState
 					setUser(chatId, user)
 					bot.sendMessage(chatId, 'Спасибо! всё верно?', CONFIRMATION_MENU)
+					const {
+						authorName,
+						city,
+						publisherName,
+						year,
+						description,
+						photos,
+						videoLink,
+						isForSale,
+						authorTelegram,
+						authorSocialNetwork,
+						price,
+					} = user.data
+
+					const linesConfirm = [
+						`<b>автор:</b> ${authorName}`,
+						`<b>город:</b> ${city}`,
+						`<b>название:</b> ${publisherName}`,
+						`<b>год:</b> ${year}`,
+						`<b>описание:</b> ${description}`,
+						`<b>видео:</b> ${videoLink ? `<a href='${videoLink}'>${videoLink}</a>` : 'не указано'}`,
+						`<b>продаётся?:</b> ${isForSale ? 'Да' : 'Нет, просто показываю красивое'}`,
+						`<b>цена:</b> ${isForSale ? `${price}` : 'не продается'}`,
+						`<b>тг аккаунт автора:</b> ${
+							authorTelegram ? `<a href='${authorTelegram}'>${authorTelegram}</a>` : 'не указано'
+						}`,
+						`<b>соцсеть автора:</b> ${
+							authorSocialNetwork
+								? `<a href='${authorSocialNetwork}'>${authorSocialNetwork}</a>`
+								: 'не указано'
+						}`,
+					]
+
+					const confirmationText = linesConfirm.join('\n')
+
+					let mediaGroup = photos.map((photoId, index) => ({
+						type: 'photo',
+						media: photoId,
+						caption: index === photos.length - 1 ? confirmationText : undefined,
+						parse_mode: index === photos.length - 1 ? 'HTML' : undefined,
+					}))
+
+					// Отправляем фотографии с подписью к последней фотографии
+					bot.sendMediaGroup(chatId, mediaGroup)
+
 					break
 				case confirmationState:
 					// Отработка кнопки "Нет, давай по новой"
-					if (msg.text === noRestartBtn) {
+					if (msg.text === noRestartBtn || msg.text === addAnotherPublicationBtn) {
 						user.state = startDialogState
 						user.data = {}
 						setUser(chatId, user)
@@ -216,6 +280,76 @@ function handleMultiStepDialog(bot) {
 					}
 					// Отработка кнопки "Да, всё так! публикуем!"
 					if (msg.text === yesPublishBtn) {
+						bot.sendMessage(
+							chatId,
+							'Спасибо! Заявка улетела к моей коллеге-человеку. Когда у неё будет время она обязательно посмотрит. "Дзинь" это независимый проект и мы всегда рады репостам, упоминаниям и донатам. Что-нибудь ещё?',
+							ADD_ANOTHER_PUBLICATION_MENU
+						)
+
+						const {
+							authorName,
+							city,
+							publisherName,
+							year,
+							description,
+							photos,
+							videoLink,
+							isForSale,
+							authorTelegram,
+							authorSocialNetwork,
+							price,
+						} = user.data
+
+						const linesForward = [
+							`<b>${publisherName}</b>`,
+							`${year}`,
+							`автор <a href="${authorSocialNetwork}">${authorName}</a>`,
+							`${city}`,
+							'',
+							`<i>${description}</i>`,
+						]
+
+						// Флаг для отслеживания того, была ли добавлена хоть одна дополнительная строка
+						let anyAdditionalLines = false
+
+						if (videoLink) {
+							if (!anyAdditionalLines) {
+								linesForward.push('')
+								anyAdditionalLines = true
+							}
+							linesForward.push(`<a href="${videoLink}">Листалка</a>`)
+						}
+
+						if (isForSale) {
+							if (!anyAdditionalLines) {
+								linesForward.push('')
+								anyAdditionalLines = true
+							}
+							linesForward.push(`<b>${price}</b>`)
+
+							if (authorTelegram) {
+								linesForward.push(
+									`Чтобы купить, пишите автору: <a href="${authorTelegram}">${authorTelegram}</a>`
+								)
+							}
+						}
+
+						// Теперь всегда добавляем пустую строку перед "Предложить свой зин"
+						linesForward.push('')
+
+						linesForward.push(`<a href="https://t.me/for_zin_bot">Предложить свой зин</a>`)
+
+						const forwardText = linesForward.join('\n')
+
+						let mediaGroup = photos.map((photoId, index) => ({
+							type: 'photo',
+							media: photoId,
+							caption: index === photos.length - 1 ? forwardText : undefined,
+							parse_mode: index === photos.length - 1 ? 'HTML' : undefined,
+						}))
+
+						// Отправляем фотографии с подписью к последней фотографии
+						bot.sendMediaGroup(6239925941, mediaGroup)
 					}
 					break
 			}

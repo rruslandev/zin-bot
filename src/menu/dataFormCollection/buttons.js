@@ -8,6 +8,9 @@ const skipBtn = 'Пропустить'
 // ALL_PHOTOS_UPLOADED_MENU
 const allPhotosUploadedBtn = 'Все фото загружены'
 
+// UPLOAD_PHOTOS_AGAIN_MENU
+const uploadPhotosAgainBtn = 'Загрузить фото заново'
+
 // SELL_QUESTION_MENU
 const yesBtn = 'Да'
 const noOnlyShowBtn = 'Нет, просто показываю красивое'
@@ -31,4 +34,5 @@ module.exports = {
 	addAnotherPublicationBtn,
 	moreInfoBtn,
 	allPhotosUploadedBtn,
+	uploadPhotosAgainBtn,
 }
