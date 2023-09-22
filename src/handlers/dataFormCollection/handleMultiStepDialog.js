@@ -1,3 +1,6 @@
+const { google } = require('googleapis')
+const keys = require('../../credentials.json')
+
 const getUser = require('../../utils/users/getUser')
 const setUser = require('../../utils/users/setUser')
 
@@ -44,6 +47,30 @@ const {
 	allPhotosUploadedBtn,
 	uploadPhotosAgainBtn,
 } = require('../../menu/dataFormCollection/buttons')
+
+const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
+	'https://www.googleapis.com/auth/spreadsheets',
+])
+
+client.authorize(function (err, tokens) {
+	if (err) {
+		console.log(err)
+		return
+	}
+	console.log('Connected to Google Sheets API')
+})
+
+const sheets = google.sheets({ version: 'v4', auth: client })
+
+async function writeToSheet(data) {
+	const sheetId = '1O40fVhwDE1D1_Cb6TakBwcO62QjX5_0CVLbtgpkRR7o' // Замените на ваш ID таблицы
+	await sheets.spreadsheets.values.append({
+		spreadsheetId: sheetId,
+		range: 'Лист1', // Обновите это имя листа, если оно отличается
+		valueInputOption: 'RAW',
+		resource: { values: [data] },
+	})
+}
 
 function handleMultiStepDialog(bot) {
 	bot.on('message', (msg) => {
@@ -348,8 +375,22 @@ function handleMultiStepDialog(bot) {
 							parse_mode: index === photos.length - 1 ? 'HTML' : undefined,
 						}))
 
-						// Отправляем фотографии с подписью к последней фотографии
-						bot.sendMediaGroup(6239925941, mediaGroup)
+						// Отправляем фотографии в личку с подписью к последней фотографии
+						bot.sendMediaGroup(133565174, mediaGroup)
+
+						writeToSheet([
+							user.username,
+							authorName,
+							city,
+							publisherName,
+							year,
+							description,
+							videoLink ? videoLink : 'не указано',
+							isForSale ? 'Да' : 'Нет',
+							price ? price : 'не продается',
+							authorTelegram ? authorTelegram : 'не указано',
+							authorSocialNetwork ? authorSocialNetwork : 'не указано',
+						])
 					}
 					break
 			}

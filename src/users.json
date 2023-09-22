@@ -4,8 +4,24 @@
 		"firstName": "Dmitriddd",
 		"lastName": "Faaaddddd",
 		"chatId": 6239925941,
-		"state": null,
-		"data": {}
+		"state": "CONFIRMATION",
+		"data": {
+			"authorName": "Дмитрий",
+			"city": "Нью-Йорк",
+			"publisherName": "Боталка 2к77",
+			"year": "2014",
+			"description": "Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, \"consectetur\", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги \"de Finibus Bonorum et Malorum\"",
+			"photos": [
+				"AgACAgIAAxkBAAIbC2UNfYijOfNJ1a_V49lbrDw55SbtAALLzTEb6ltpSOs6EZPL7KtrAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIbDGUNfYhx-MO1y4BsEZnSab5-9VIaAALMzTEb6ltpSPbE_t2XjN9QAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIbDWUNfYjJhqG9IRJHeOnEE5YyXxRBAALNzTEb6ltpSKoD6miNJvaQAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIbDmUNfYhXhv0hsx-VT6xbgZFkrDcCAALOzTEb6ltpSLm5W2vf1vtIAQADAgADeQADMAQ"
+			],
+			"videoLink": "",
+			"isForSale": false,
+			"authorTelegram": "https://t.me/dmitrii_fakedddddddd",
+			"authorSocialNetwork": ""
+		}
 	},
 	{
 		"username": "rruslan_dev",
@@ -14,19 +30,20 @@
 		"chatId": 439592022,
 		"state": "CONFIRMATION",
 		"data": {
-			"authorName": "ruslan",
-			"city": "almaty",
-			"publisherName": "Спасибо! Заявка улетела к моей коллеге-человеку. Когда у неё будет вр",
-			"year": "2023",
-			"description": "Спасибо! Заявка улетела к моей коллеге-человеку. Когда у неё будет время она обязательно посмотрит. \"Дзинь\" это независимый проект и мы всегда рады репостам, упоминаниям и донатам. Что-нибудь ещё?\n\nДобавить ещ...",
+			"authorName": "Валерия",
+			"city": "Ростов",
+			"publisherName": "Печатное издание номер 1",
+			"year": "2015",
+			"description": "это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах",
 			"photos": [
-				"AgACAgIAAxkBAAIaPGUMyKQfZlMmS3lGc6sYKBj8M8iMAAL2zzEb6OhgSCBaXTI4MeB_AQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIaPWUMyKSQ3_D3CxNI-h_Xal5Im6p9AAL3zzEb6OhgSL3SXa9RNGT5AQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIaPmUMyKSvUe0agS1nM4X5_sC1MjA6AAL4zzEb6OhgSDL8nxqL5JyqAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIaP2UMyKSqduSmwin5KXe-L2Ly8A_XAAL5zzEb6OhgSEuQ8hVZRf7ZAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIaQGUMyKQQjsFn88WRc6bzeYXtBlYsAAPQMRvo6GBIs9FvnMCG5JYBAAMCAAN5AAMwBA"
+				"AgACAgIAAxkBAAIa32UNfR28YGlVCgQMd2FrXK5HyCh3AAL3zzEb6OhgSL3SXa9RNGT5AQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIa4GUNfR3MHXNQ80AmLXGktXbllDYCAAL4zzEb6OhgSDL8nxqL5JyqAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIa4WUNfR3sgyh1BeSM8mXtIs0UIrqBAAL5zzEb6OhgSEuQ8hVZRf7ZAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIa4mUNfR0OeEJBEdKDL8LA86Lb3GlWAAPQMRvo6GBIs9FvnMCG5JYBAAMCAAN5AAMwBA",
+				"AgACAgIAAxkBAAIa42UNfR0le55k3z09gTTP3Vxftmr8AALF0DEb6OhgSAaArrlplPicAQADAgADeQADMAQ",
+				"AgACAgIAAxkBAAIa5GUNfR3unLFzX3LlsdVrWRmLA7rPAAKmzDEb6OhoSHFyUtLsgQNAAQADAgADeQADMAQ"
 			],
-			"videoLink": "",
+			"videoLink": "https://www.youtube.com/watch?v=jfKfPfyJRdk",
 			"isForSale": false,
 			"authorTelegram": "",
 			"authorSocialNetwork": ""
