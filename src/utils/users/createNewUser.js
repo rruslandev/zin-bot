@@ -7,7 +7,6 @@ function createNewUser(msg, chatId) {
 		chatId,
 		state: null,
 		data: {},
-		// добавьте другие поля по мере необходимости
 	}
 }
 

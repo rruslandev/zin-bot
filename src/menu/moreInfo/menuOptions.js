@@ -21,4 +21,4 @@ const MORE_INFO_MENU = {
 	},
 }
 
-module.exports = { MORE_INFO_MENU }
+module.exports = MORE_INFO_MENU

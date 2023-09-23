@@ -7,4 +7,4 @@ const MAIN_MENU = {
 	},
 }
 
-module.exports = { MAIN_MENU }
+module.exports = MAIN_MENU

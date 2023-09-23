@@ -1,60 +1,10 @@
 [
 	{
-		"username": "dmitrii_fakedddddddd",
-		"firstName": "Dmitriddd",
-		"lastName": "Faaaddddd",
-		"chatId": 6239925941,
-		"state": "CONFIRMATION",
-		"data": {
-			"authorName": "Дмитрий",
-			"city": "Нью-Йорк",
-			"publisherName": "Боталка 2к77",
-			"year": "2014",
-			"description": "Многие думают, что Lorem Ipsum - взятый с потолка псевдо-латинский набор слов, но это не совсем так. Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, \"consectetur\", и занялся его поисками в классической латинской литературе. В результате он нашёл неоспоримый первоисточник Lorem Ipsum в разделах 1.10.32 и 1.10.33 книги \"de Finibus Bonorum et Malorum\"",
-			"photos": [
-				"AgACAgIAAxkBAAIbC2UNfYijOfNJ1a_V49lbrDw55SbtAALLzTEb6ltpSOs6EZPL7KtrAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIbDGUNfYhx-MO1y4BsEZnSab5-9VIaAALMzTEb6ltpSPbE_t2XjN9QAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIbDWUNfYjJhqG9IRJHeOnEE5YyXxRBAALNzTEb6ltpSKoD6miNJvaQAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIbDmUNfYhXhv0hsx-VT6xbgZFkrDcCAALOzTEb6ltpSLm5W2vf1vtIAQADAgADeQADMAQ"
-			],
-			"videoLink": "",
-			"isForSale": false,
-			"authorTelegram": "https://t.me/dmitrii_fakedddddddd",
-			"authorSocialNetwork": ""
-		}
-	},
-	{
 		"username": "rruslan_dev",
 		"firstName": "RUSLAN",
 		"lastName": "",
 		"chatId": 439592022,
-		"state": "CONFIRMATION",
-		"data": {
-			"authorName": "Валерия",
-			"city": "Ростов",
-			"publisherName": "Печатное издание номер 1",
-			"year": "2015",
-			"description": "это текст-\"рыба\", часто используемый в печати и вэб-дизайне. Lorem Ipsum является стандартной \"рыбой\" для текстов на латинице с начала XVI века. В то время некий безымянный печатник создал большую коллекцию размеров и форм шрифтов, используя Lorem Ipsum для распечатки образцов. Lorem Ipsum не только успешно пережил без заметных изменений пять веков, но и перешагнул в электронный дизайн. Его популяризации в новое время послужили публикация листов Letraset с образцами Lorem Ipsum в 60-х годах",
-			"photos": [
-				"AgACAgIAAxkBAAIa32UNfR28YGlVCgQMd2FrXK5HyCh3AAL3zzEb6OhgSL3SXa9RNGT5AQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIa4GUNfR3MHXNQ80AmLXGktXbllDYCAAL4zzEb6OhgSDL8nxqL5JyqAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIa4WUNfR3sgyh1BeSM8mXtIs0UIrqBAAL5zzEb6OhgSEuQ8hVZRf7ZAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIa4mUNfR0OeEJBEdKDL8LA86Lb3GlWAAPQMRvo6GBIs9FvnMCG5JYBAAMCAAN5AAMwBA",
-				"AgACAgIAAxkBAAIa42UNfR0le55k3z09gTTP3Vxftmr8AALF0DEb6OhgSAaArrlplPicAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIa5GUNfR3unLFzX3LlsdVrWRmLA7rPAAKmzDEb6OhoSHFyUtLsgQNAAQADAgADeQADMAQ"
-			],
-			"videoLink": "https://www.youtube.com/watch?v=jfKfPfyJRdk",
-			"isForSale": false,
-			"authorTelegram": "",
-			"authorSocialNetwork": ""
-		}
-	},
-	{
-		"username": "ilyamolokov",
-		"firstName": "i am Илья",
-		"lastName": "",
-		"chatId": 263018510,
-		"state": "START_DIALOG",
+		"state": null,
 		"data": {}
 	},
 	{
@@ -62,24 +12,15 @@
 		"firstName": "Валерия",
 		"lastName": "",
 		"chatId": 133565174,
-		"state": "CONFIRMATION",
-		"data": {
-			"authorName": "Имя Фамилия",
-			"city": "Ростов",
-			"publisherName": "тест-зин",
-			"year": "2023",
-			"description": "Пленочная зеркалка, много современных функций в ней присутствует , байонет с этой камеры Сони до сих пор использует на современных своих цифровых камерах, то есть на нее можно ставить современные объективы Сони с байонетом А и будет работать автофокус и остальные функции. Состояние отлично, все работает как надо, слабое место в этих моделях автофокус, но на этой прекрасно работает.",
-			"photos": [
-				"AgACAgIAAxkBAAIZYWUMvzXtbAEelk0EwLbHodwLrY1HAAJD1DEb3udoSLn4kOrLlSPBAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIZYmUMvzVcxJt5VswtcF1ZQq1Bm5n5AAJA1DEb3udoSDs___L4r-mkAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIZY2UMvzVu3vKN-vG9fA-DN1dX7kFNAAJB1DEb3udoSKMcUeSFYUfnAQADAgADeQADMAQ",
-				"AgACAgIAAxkBAAIZZGUMvzWEXFtm2FXL0le5O6PigromAAJC1DEb3udoSOmgyLk2hyMYAQADAgADeQADMAQ"
-			],
-			"videoLink": "",
-			"isForSale": true,
-			"price": "500",
-			"authorTelegram": "https://t.me/krugloval",
-			"authorSocialNetwork": "t.me/lens_based"
-		}
+		"state": null,
+		"data": {}
+	},
+	{
+		"username": "dmitrii_fakedddddddd",
+		"firstName": "Dmitriddd",
+		"lastName": "Faaaddddd",
+		"chatId": 6239925941,
+		"state": "START_DIALOG",
+		"data": {}
 	}
 ]
