@@ -1,3 +1,5 @@
-const googleSheetId = '1O40fVhwDE1D1_Cb6TakBwcO62QjX5_0CVLbtgpkRR7o'
+// https://docs.google.com/spreadsheets/d/1x8dDlsZYp-De9GkPSBQKZEfojS5EtSJfsLMwfefNBgA/edit?usp=sharing
+
+const googleSheetId = '1x8dDlsZYp-De9GkPSBQKZEfojS5EtSJfsLMwfefNBgA'
 
 module.exports = googleSheetId

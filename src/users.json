@@ -4,7 +4,23 @@
 		"firstName": "RUSLAN",
 		"lastName": "",
 		"chatId": 439592022,
-		"state": "FINISHED",
+		"state": "START_DIALOG",
+		"data": {}
+	},
+	{
+		"username": "krugloval",
+		"firstName": "Валерия",
+		"lastName": "",
+		"chatId": 133565174,
+		"state": null,
+		"data": {}
+	},
+	{
+		"username": "dmitrii_fakedddddddd",
+		"firstName": "Dmitriddd",
+		"lastName": "Faaaddddd",
+		"chatId": 6239925941,
+		"state": "START_DIALOG",
 		"data": {}
 	}
 ]

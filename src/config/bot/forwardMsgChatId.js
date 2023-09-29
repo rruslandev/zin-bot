@@ -1,4 +1,7 @@
 // Валерия
-const forwardMsgChatId = '439592022'
+const forwardMsgChatId = '133565174'
+
+// Руслан
+// const forwardMsgChatId = '439592022'
 
 module.exports = forwardMsgChatId

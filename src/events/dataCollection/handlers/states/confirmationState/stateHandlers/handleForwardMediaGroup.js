@@ -1,4 +1,5 @@
 const forwardMsgChatId = require('../../../../../../config/bot/forwardMsgChatId')
+const botTgLink = require('../../../../../../config/bot/botTgLink')
 
 async function handleForwardMediaGroup(bot, user) {
 	const {
@@ -53,7 +54,7 @@ async function handleForwardMediaGroup(bot, user) {
 	// Пустая строка перед "Предложить свой зин"
 	linesForward.push('')
 
-	linesForward.push(`<a href="https://t.me/for_zin_bot">Предложить свой зин</a>`)
+	linesForward.push(`<a href="${botTgLink}">Предложить свой зин</a>`)
 
 	const forwardText = linesForward.join('\n')
 
