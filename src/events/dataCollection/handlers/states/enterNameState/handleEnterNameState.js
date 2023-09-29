@@ -7,12 +7,12 @@ const { nameCharsLimit } = require('../../../../../config/bot/charsLimit')
 const alertNameCharsLimit = require('./stateHandlers/alertNameCharsLimit')
 
 function handleEnterNameState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > nameCharsLimit) {
 		alertNameCharsLimit(bot, chatId)

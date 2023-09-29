@@ -9,12 +9,12 @@ const alertTelegramCharsLimit = require('./stateHandlers/alertTelegramCharsLimit
 const { telegramCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterTelegramState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > telegramCharsLimit) {
 		alertTelegramCharsLimit(bot, chatId)

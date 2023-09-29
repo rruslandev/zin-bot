@@ -11,13 +11,13 @@ const publisherNameCharsLimit = 50
 const yearCharsLimit = 15
 
 // Описание
-const descriptionCharsLimit = 800
+const descriptionCharsLimit = 700
 
 // Листалка
 const videoUrlCharsLimit = 50
 
 // Цена
-const priceCharsLimit = 10
+const priceCharsLimit = 15
 
 // Телеграм
 const telegramCharsLimit = 50

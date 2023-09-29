@@ -11,6 +11,7 @@ const handleEnterPriceState = require('./enterPriceState/handleEnterPriceState')
 const handleEnterTelegramState = require('./enterTelegramState/handleEnterTelegramState')
 const handleEnterSocialNetworkState = require('./enterSocialNetworkState/handleEnterSocialNetworkState')
 const handleConfirmationState = require('./confirmationState/handleConfirmationState')
+const handleFinishedState = require('./finishedState/handleFinishedState')
 
 const {
 	startDialogState,
@@ -26,6 +27,7 @@ const {
 	enterTelegramState,
 	enterSocialNetworkState,
 	confirmationState,
+	finishedState,
 } = require('./states')
 
 function handleStatesActions(bot, chatId, user, msg) {
@@ -68,6 +70,9 @@ function handleStatesActions(bot, chatId, user, msg) {
 			break
 		case confirmationState:
 			handleConfirmationState(bot, chatId, user, msg)
+			break
+		case finishedState:
+			handleFinishedState(bot, chatId, user, msg)
 			break
 	}
 }

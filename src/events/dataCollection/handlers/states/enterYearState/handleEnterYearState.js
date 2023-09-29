@@ -7,12 +7,12 @@ const alertYearCharsLimit = require('./stateHandlers/alertYearCharsLimit')
 const { yearCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterYearState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > yearCharsLimit) {
 		alertYearCharsLimit(bot, chatId)

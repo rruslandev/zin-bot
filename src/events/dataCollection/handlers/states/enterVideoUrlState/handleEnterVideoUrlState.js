@@ -9,12 +9,12 @@ const alertVideoUrlCharsLimit = require('./stateHandlers/alertVideoUrlCharsLimit
 const { videoUrlCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterVideoUrlState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > videoUrlCharsLimit) {
 		alertVideoUrlCharsLimit(bot, chatId)

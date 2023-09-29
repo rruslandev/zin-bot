@@ -11,6 +11,7 @@ const enterPriceState = 'ENTER_PRICE'
 const enterTelegramState = 'ENTER_TELEGRAM'
 const enterSocialNetworkState = 'ENTER_SOCIAL_NETWORK'
 const confirmationState = 'CONFIRMATION'
+const finishedState = 'FINISHED'
 
 module.exports = {
 	startDialogState,
@@ -26,4 +27,5 @@ module.exports = {
 	enterTelegramState,
 	enterSocialNetworkState,
 	confirmationState,
+	finishedState,
 }

@@ -1,4 +1,5 @@
-const alertSocialNetworkCharsLimitMsg =
-	'это точно правильная ссылка на соцсеть? мы рассчитывали что она будет не больше 50 знаков'
+const { socialNetworkCharsLimit } = require('../../../config/bot/charsLimit')
+
+const alertSocialNetworkCharsLimitMsg = `это точно правильная ссылка на соцсеть? мы рассчитывали что она будет не больше ${socialNetworkCharsLimit} знаков`
 
 module.exports = alertSocialNetworkCharsLimitMsg

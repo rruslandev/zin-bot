@@ -1,89 +1,10 @@
 [
-  {
-    "username": "rruslan_dev",
-    "firstName": "RUSLAN",
-    "lastName": "",
-    "chatId": 439592022,
-    "state": "ENTER_CITY",
-    "data": {
-      "authorName": "Hhhh"
-    }
-  },
-  {
-    "username": "krugloval",
-    "firstName": "Валерия",
-    "lastName": "",
-    "chatId": 133565174,
-    "state": "CONFIRMATION",
-    "data": {
-      "authorName": "Лера Круглова",
-      "city": "Ростов-на-Дону",
-      "publisherName": "Flight Mode",
-      "year": "2023",
-      "description": "В основе зина лежат слайды, которые я однажды купила на блошином рынке. Я не знаю, кто эти люди. У меня нет никаких подробностей о том, где и когда были сделаны эти фотографии. Каждую неделю я хожу на блошиный рынок и пытаюсь найти человека, который продал мне эти слайды. Если вы узнаете кого-нибудь на этих фотографиях, пожалуйста, напишите мне",
-      "photos": [
-        "AgACAgIAAxkBAAInKmUUlMfp8yJsDG-hSh2rZNGsr_wtAAI70TEbrcWhSCdkw9RiYQqeAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAInK2UUlMeFQvsAAYI0QqVwcjXpEgbEvQACPNExG63FoUhFE72dLSbL7QEAAwIAA3kAAzAE",
-        "AgACAgIAAxkBAAInLGUUlMdnIA7aa24CZ1xwju1VblXoAAI90TEbrcWhSM_1KNbqy9uSAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAInLWUUlMepJGmQtdyAcv3w36i1ptDaAAI-0TEbrcWhSMp8cRQ2XMQcAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAInLmUUlMeS3sO1mGadoVHSzOJpTSFKAAI_0TEbrcWhSGsrQa0g3HytAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAInL2UUlMe2sngwOyp2tWXFTxccWE_wAAJA0TEbrcWhSMMcLUOenluyAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAInMGUUlMeZ6o0mvwtIZ5ztoAx8lv4oAAJB0TEbrcWhSERduZRzlQQNAQADAgADeQADMAQ"
-      ],
-      "videoLink": "https://youtu.be/ki5_TM4qtmo?si=S9NxU7eFtik4X8nk",
-      "isForSale": true,
-      "price": "750₽",
-      "authorTelegram": "https://t.me/krugloval",
-      "authorSocialNetwork": "https://t.me/lens_based"
-    }
-  },
-  {
-    "username": "dmitrii_fakedddddddd",
-    "firstName": "Dmitriddd",
-    "lastName": "Faaaddddd",
-    "chatId": 6239925941,
-    "state": null,
-    "data": {}
-  },
-  {
-    "username": "",
-    "firstName": "Andreevd",
-    "lastName": "",
-    "chatId": 5205033674,
-    "state": null,
-    "data": {}
-  },
-  {
-    "username": "qt_eva",
-    "firstName": "eva",
-    "lastName": "",
-    "chatId": 335355510,
-    "state": "ENTER_NAME",
-    "data": {}
-  },
-  {
-    "username": "NatPokrovskaya",
-    "firstName": "Natalia",
-    "lastName": "Pokrovskaya",
-    "chatId": 159008208,
-    "state": "CONFIRMATION",
-    "data": {
-      "authorName": "Kelly Fish",
-      "city": "NY",
-      "publisherName": "Hello my name was hello",
-      "year": "2028",
-      "description": "The time is not the only way to what you want. There’s no reason for you to be in your position to be able to come back. I celebrate myself today with the same as you",
-      "photos": [
-        "AgACAgIAAxkBAAImB2US9mj0Atv8Zbk3gaI4Gacmafv-AAKEzTEbXJCZSJ4wgIHY-r_uAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAImCGUS9mgqFCAvu9cB8rL6x6m0HWmbAALlzTEbXJCZSDYKs9ub3iO-AQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAImCWUS9mhwtioFVPLrc7NloAJrvZsTAAKFzTEbXJCZSL86qYYRRcfuAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAImCmUS9mj5gASBv_6DZdGhI3EZVm77AAKIzTEbXJCZSNlnjalGobjlAQADAgADeQADMAQ",
-        "AgACAgIAAxkBAAImC2US9miul6yyfia4V-Gk3EKP4HNcAAKGzTEbXJCZSJdWzAXzXFPDAQADAgADeQADMAQ"
-      ],
-      "videoLink": "",
-      "isForSale": false,
-      "authorTelegram": "",
-      "authorSocialNetwork": ""
-    }
-  }
+	{
+		"username": "rruslan_dev",
+		"firstName": "RUSLAN",
+		"lastName": "",
+		"chatId": 439592022,
+		"state": "FINISHED",
+		"data": {}
+	}
 ]

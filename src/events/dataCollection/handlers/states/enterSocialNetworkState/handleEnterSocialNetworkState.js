@@ -10,12 +10,12 @@ const alertSocialNetworkCharsLimit = require('./stateHandlers/alertSocialNetwork
 const { socialNetworkCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 async function handleEnterSocialNetworkState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > socialNetworkCharsLimit) {
 		alertSocialNetworkCharsLimit(bot, chatId)

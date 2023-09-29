@@ -5,14 +5,15 @@ const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
 const alertPriceCharsLimit = require('./stateHandlers/alertPriceCharsLimit')
 const { priceCharsLimit } = require('../../../../../config/bot/charsLimit')
+const enterTelegramMsg = require('../../../../../messages/dataCollection/isForSaleState/enterTelegramMsg')
 
 function handleEnterPriceState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > priceCharsLimit) {
 		alertPriceCharsLimit(bot, chatId)
@@ -22,11 +23,7 @@ function handleEnterPriceState(bot, chatId, user, msg) {
 	user.data.price = msgText
 	user.state = enterTelegramState
 	setUser(chatId, user)
-	bot.sendMessage(
-		chatId,
-		'тг аккаунт для связи с автором. Если на ваше произведение найдется покупатель — он напишет вам напрямую. Укажите только username без @ и t.me/',
-		SKIP_MENU
-	)
+	bot.sendMessage(chatId, enterTelegramMsg, SKIP_MENU)
 }
 
 module.exports = handleEnterPriceState

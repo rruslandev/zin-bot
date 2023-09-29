@@ -7,12 +7,12 @@ const { cityCharsLimit } = require('../../../../../config/bot/charsLimit')
 const alertCityCharsLimit = require('./stateHandlers/alertCityCharsLimit')
 
 function handleEnterCityState(bot, chatId, user, msg) {
-	const msgText = normalizeNewLines(msg.text)
-
-	if (!msgText) {
+	if (!msg.text) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
+
+	const msgText = normalizeNewLines(msg.text)
 
 	if (msgText.length > cityCharsLimit) {
 		alertCityCharsLimit(bot, chatId)
