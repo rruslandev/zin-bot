@@ -2,12 +2,20 @@ const { enterYearState } = require('../states')
 const setUser = require('../../../../../utils/users/setUser')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const enterYearMsg = require('../../../../../messages/dataCollection/enterPublisherNameState/enterYearMsg')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const { publisherNameCharsLimit } = require('../../../../../config/bot/charsLimit')
+const alertPublisherNameCharsLimit = require('./stateHandlers/alertPublisherNameCharsLimit')
 
 function handleEnterPublisherNameState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
+		return
+	}
+
+	if (msgText.length > publisherNameCharsLimit) {
+		alertPublisherNameCharsLimit(bot, chatId)
 		return
 	}
 

@@ -5,12 +5,20 @@ const setUser = require('../../../../../utils/users/setUser')
 const handleMediaGroupConfirmation = require('./stateHandlers/handleMediaGroupConfirmation')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const confirmMsg = require('../../../../../messages/dataCollection/confirmationState/confirmMsg')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const alertSocialNetworkCharsLimit = require('./stateHandlers/alertSocialNetworkCharsLimit')
+const { socialNetworkCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 async function handleEnterSocialNetworkState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
+		return
+	}
+
+	if (msgText.length > socialNetworkCharsLimit) {
+		alertSocialNetworkCharsLimit(bot, chatId)
 		return
 	}
 

@@ -1,4 +1,4 @@
-const forwardMsgChatId = require('../../../../../../config/forwardMsgChatId')
+const forwardMsgChatId = require('../../../../../../config/bot/forwardMsgChatId')
 
 async function handleForwardMediaGroup(bot, user) {
 	const {
@@ -17,22 +17,23 @@ async function handleForwardMediaGroup(bot, user) {
 
 	const linesForward = [
 		`<b>${publisherName}</b>`,
-		`${year}`,
-		`автор <a href="${authorSocialNetwork}">${authorName}</a>`,
+		`<a href="${authorSocialNetwork}">${authorName}</a>`,
 		`${city}`,
+		`${year}`,
 		'',
-		`<i>${description}</i>`,
+		`${description}`,
 	]
 
 	// Флаг для отслеживания того, была ли добавлена хоть одна дополнительная строка
 	let anyAdditionalLines = false
 
 	if (videoLink) {
-		if (!anyAdditionalLines) {
-			linesForward.push('')
-			anyAdditionalLines = true
-		}
-		linesForward.push(`<a href="${videoLink}">Листалка</a>`)
+		// добавляет пробел после description
+		// if (!anyAdditionalLines) {
+		// 	linesForward.push('')
+		// 	anyAdditionalLines = true
+		// }
+		linesForward.push(`📹<a href="${videoLink}">листалка</a>`)
 	}
 
 	if (isForSale) {
@@ -49,7 +50,7 @@ async function handleForwardMediaGroup(bot, user) {
 		}
 	}
 
-	// Теперь всегда добавляем пустую строку перед "Предложить свой зин"
+	// Пустая строка перед "Предложить свой зин"
 	linesForward.push('')
 
 	linesForward.push(`<a href="https://t.me/for_zin_bot">Предложить свой зин</a>`)

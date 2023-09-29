@@ -2,12 +2,20 @@ const { enterTelegramState } = require('../states')
 const { SKIP_MENU } = require('../../../../../menu/dataCollection/menuOptions')
 const setUser = require('../../../../../utils/users/setUser')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const alertPriceCharsLimit = require('./stateHandlers/alertPriceCharsLimit')
+const { priceCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterPriceState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
+		return
+	}
+
+	if (msgText.length > priceCharsLimit) {
+		alertPriceCharsLimit(bot, chatId)
 		return
 	}
 

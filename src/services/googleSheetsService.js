@@ -1,7 +1,7 @@
 const { google } = require('googleapis')
-const keys = require('../config/credentials.json')
-const googleSheetId = require('../config/googleSheetId')
-const sheetRange = require('../config/sheetRange')
+const keys = require('../config/googleSheets/credentials.json')
+const googleSheetId = require('../config/googleSheets/googleSheetId')
+const sheetRange = require('../config/googleSheets/sheetRange')
 
 const client = new google.auth.JWT(keys.client_email, null, keys.private_key, [
 	'https://www.googleapis.com/auth/spreadsheets',

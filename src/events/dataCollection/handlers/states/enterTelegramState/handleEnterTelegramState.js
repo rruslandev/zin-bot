@@ -4,19 +4,27 @@ const { SKIP_MENU } = require('../../../../../menu/dataCollection/menuOptions')
 const setUser = require('../../../../../utils/users/setUser')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const enterSocialNetworkMsg = require('../../../../../messages/dataCollection/enterTelegramState/enterSocialNetworkMsg')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const alertTelegramCharsLimit = require('./stateHandlers/alertTelegramCharsLimit')
+const { telegramCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterTelegramState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
 		return
 	}
 
+	if (msgText.length > telegramCharsLimit) {
+		alertTelegramCharsLimit(bot, chatId)
+		return
+	}
+
 	if (msgText === skipBtn) {
 		user.data.authorTelegram = ''
 	} else {
-		user.data.authorTelegram = `https://t.me/${msgText}`
+		user.data.authorTelegram = `@${msgText}`
 	}
 	user.state = enterSocialNetworkState
 	setUser(chatId, user)

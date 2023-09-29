@@ -3,12 +3,20 @@ const setUser = require('../../../../../utils/users/setUser')
 const { UPLOAD_PHOTOS_MENU } = require('../../../../../menu/dataCollection/menuOptions')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const uploadPhotosMsg = require('../../../../../messages/dataCollection/enterDescriptionState/uploadPhotosMsg')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const alertDescriptionCharsLimit = require('./stateHandlers/alertDescriptionCharsLimit')
+const { descriptionCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterDescriptionState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
+		return
+	}
+
+	if (msgText.length > descriptionCharsLimit) {
+		alertDescriptionCharsLimit(bot, chatId)
 		return
 	}
 

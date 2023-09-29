@@ -1,6 +1,6 @@
 const TelegramBot = require('node-telegram-bot-api')
 
-const BOT_TOKEN = require('./config/tokens')
+const BOT_TOKEN = require('./config/bot/tokens')
 
 const startCommandRequest = require('./events/start/startCommandRequest')
 const dataCollectionDialogRequest = require('./events/dataCollection/dataCollectionDialogRequest')

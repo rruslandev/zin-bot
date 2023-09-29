@@ -4,12 +4,20 @@ const { SELL_QUESTION_MENU } = require('../../../../../menu/dataCollection/menuO
 const setUser = require('../../../../../utils/users/setUser')
 const validStringInputAlert = require('../../../utils/validStringInputAlert')
 const isForSaleMsg = require('../../../../../messages/dataCollection/enterVideoUrlState/isForSaleMsg')
+const normalizeNewLines = require('../../../../dataCollection/utils/normalizeNewLines')
+const alertVideoUrlCharsLimit = require('./stateHandlers/alertVideoUrlCharsLimit')
+const { videoUrlCharsLimit } = require('../../../../../config/bot/charsLimit')
 
 function handleEnterVideoUrlState(bot, chatId, user, msg) {
-	const msgText = msg.text
+	const msgText = normalizeNewLines(msg.text)
 
 	if (!msgText) {
 		validStringInputAlert(bot, chatId)
+		return
+	}
+
+	if (msgText.length > videoUrlCharsLimit) {
+		alertVideoUrlCharsLimit(bot, chatId)
 		return
 	}
 
